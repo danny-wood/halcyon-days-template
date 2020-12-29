@@ -1,0 +1,24 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --grid_container: [left-gutter] 1fr [contained] minmax(0, 1150px)
+    [right-gutter] 1fr;
+}
+
+body {
+  margin: 0;
+  font-family: "Varela Round", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: var(--grid_container);
+}
+
+.contained {
+  grid-column: contained;
+}
+
+.fluid {
+  grid-column: left-gutter / -1;
+}
