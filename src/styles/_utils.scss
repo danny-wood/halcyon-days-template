@@ -1,0 +1,15 @@
+// Background Colours
+@for $i from 1 through 6 {
+  .bg-grey-#{$i}00 {
+    background-color: var(#{unquote("--grey_#{$i}00")});
+  }
+}
+
+// Text Align
+$textAlignOptions: left, center, right;
+
+@each $option in $textAlignOptions {
+  .text-#{$option} {
+    text-align: $option;
+  }
+}

@@ -1,0 +1,17 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  color: var(--grey_500);
+  display: grid;
+  grid-template-columns: var(--grid_container);
+  text-align: right;
+
+  .menu-icon {
+    margin: 0.75rem 0;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}

@@ -1,9 +1,38 @@
 .hero-banner {
-  background: #f2f2f2;
-  text-align: center;
+  background: var(--grey_200);
   height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+  }
 
   h1 {
     letter-spacing: 12px;
+    color: var(--grey_500);
+    text-transform: uppercase;
+
+    span {
+      color: var(--grey_300);
+    }
+  }
+
+  .scroll-arrow {
+    position: absolute;
+    bottom: 1.5rem;
+    z-index: 10;
+    left: calc(50% - 26px);
   }
 }

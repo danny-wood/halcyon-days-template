@@ -1,0 +1,11 @@
+.scroll-arrow {
+  background: var(--primary);
+  color: var(--white);
+  padding: 0.75rem;
+  border-radius: 50%;
+  font-size: 1.75rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
