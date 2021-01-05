@@ -1,3 +1,66 @@
+// Mixins
+@mixin generateClass($class, $prefix, $size, $extension: "px") {
+  .#{$class}-#{$size} {
+    #{$prefix}: 1 * $size#{$extension};
+  }
+}
+
+// Margins and Padding
+//TODO: Extend to include my and mx classes
+@for $i from 0 through 20 {
+  @include generateClass(m, margin, $i * 5);
+  @include generateClass(ml, margin-left, $i * 5);
+  @include generateClass(mt, margin-top, $i * 5);
+  @include generateClass(mb, margin-bottom, $i * 5);
+  @include generateClass(mr, margin-right, $i * 5);
+}
+
+@for $i from 0 through 20 {
+  @include generateClass(p, padding, $i * 5);
+  @include generateClass(pl, padding-left, $i * 5);
+  @include generateClass(pt, padding-top, $i * 5);
+  @include generateClass(pb, padding-bottom, $i * 5);
+  @include generateClass(pr, padding-right, $i * 5);
+}
+
+// Grid
+.grid {
+  display: grid;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: var(--grid_container);
+}
+
+.contained {
+  grid-column: contained;
+}
+
+.fluid {
+  grid-column: left-gutter / -1;
+}
+
+// Columns
+@for $i from 2 through 6 {
+  .col-#{$i} {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(#{$i}, 1fr);
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+// Gap. Note: Keep the grid classes after the column classes so the styles cascade and overwrite the default col gap.
+@for $i from 1 through 6 {
+  .gap-#{$i}0 {
+    gap: #{$i}0px;
+  }
+}
+
 // Background Colours
 @for $i from 1 through 6 {
   .bg-grey-#{$i}00 {
@@ -12,4 +75,23 @@ $textAlignOptions: left, center, right;
   .text-#{$option} {
     text-align: $option;
   }
+}
+
+// Shadows
+.shadow {
+  text-shadow: rgb(55, 181, 161) 1px 1px, rgb(55, 181, 161) 2px 2px,
+    rgb(55, 181, 161) 3px 3px, rgb(55, 181, 161) 4px 4px,
+    rgb(55, 181, 161) 5px 5px, rgb(55, 181, 161) 6px 6px,
+    rgb(55, 181, 161) 7px 7px, rgb(55, 181, 161) 8px 8px,
+    rgb(55, 181, 161) 9px 9px, rgb(55, 181, 161) 10px 10px,
+    rgb(55, 181, 161) 11px 11px, rgb(55, 181, 161) 12px 12px,
+    rgb(55, 182, 162) 13px 13px, rgb(55, 183, 163) 14px 14px,
+    rgb(56, 184, 164) 15px 15px, rgb(56, 185, 165) 16px 16px,
+    rgb(56, 186, 166) 17px 17px, rgb(57, 187, 167) 18px 18px,
+    rgb(57, 188, 168) 19px 19px, rgb(57, 189, 169) 20px 20px,
+    rgb(58, 191, 170) 21px 21px, rgb(58, 192, 171) 22px 22px,
+    rgb(58, 193, 172) 23px 23px, rgb(59, 194, 173) 24px 24px,
+    rgb(59, 195, 174) 25px 25px, rgb(59, 196, 175) 26px 26px,
+    rgb(60, 197, 176) 27px 27px, rgb(60, 198, 177) 28px 28px,
+    rgb(60, 199, 178) 29px 29px, rgb(61, 201, 179) 30px 30px;
 }

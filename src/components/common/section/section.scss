@@ -1,0 +1,22 @@
+.page-section {
+  padding: 6rem 0;
+  text-align: center;
+
+  .page-section-title {
+    text-transform: uppercase;
+    color: var(--grey_500);
+
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .page-section-title-bg {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
