@@ -2,6 +2,7 @@ import { FaLaptop, FaCode, FaHeart } from "react-icons/fa";
 import MainLayout from "components/layout/MainLayout";
 import HeroBanner from "components/common/hero-banner/HeroBanner";
 import bannerSrc from "assets/hero-bg.jpg";
+import iphoneSrc from "assets/iphone-bg.png";
 import Section from "./components/common/section/Section";
 
 function App() {
@@ -57,6 +58,34 @@ function App() {
               nunc. Interdum et malesuada fames ac ante ipsum primis in
               faucibus.
             </p>
+          </div>
+        </div>
+      </Section>
+      <Section isFluid={true} isPadded={false}>
+        <div className="col-2 gap-0">
+          <div className="offest-section-image-right bg-grey-100">
+            <img src={iphoneSrc} alt="iPhone" loading="lazy" />
+          </div>
+          <div>
+            <Section title="Responsive Design Spedialists">
+              <div className="p-60">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                  ultricies nulla non metus pulvinar imperdiet. Praesent non
+                  adipiscing libero.
+                </p>
+                <p>
+                  Mauris ultrices odio vitae nulla ultrices iaculis. Nulla
+                  rhoncus odio eu lectus faucibus facilisis. Maecenas ornare
+                  augue vitae sollicitudin accumsan.
+                </p>
+                <p>
+                  Etiam eget libero et erat eleifend consectetur a nec lectus.
+                  Sed id tellus lorem. Suspendisse sed venenatis odio, quis
+                  lobortis eros.
+                </p>
+              </div>
+            </Section>
           </div>
         </div>
       </Section>

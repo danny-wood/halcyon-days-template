@@ -55,6 +55,9 @@
 }
 
 // Gap. Note: Keep the grid classes after the column classes so the styles cascade and overwrite the default col gap.
+.gap-0 {
+  gap: 0;
+}
 @for $i from 1 through 6 {
   .gap-#{$i}0 {
     gap: #{$i}0px;
