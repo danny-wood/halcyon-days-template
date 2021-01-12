@@ -1,0 +1,14 @@
+footer {
+  background: var(--grey_600);
+  color: var(--white);
+  padding: 3rem 0;
+
+  a {
+    color: var(--grey_300);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+}

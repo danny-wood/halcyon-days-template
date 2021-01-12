@@ -40,9 +40,21 @@ h1 {
   font-size: 2.5rem;
 }
 
+h2 {
+  font-size: 2.3rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
 p {
   line-height: 1.6;
   margin-top: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .primary-circle {
@@ -68,6 +80,14 @@ p {
   object-fit: fill;
 }
 
+.img-fluid {
+  max-width: 100%;
+}
+
 .overflow-hidden {
   overflow: hidden;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }

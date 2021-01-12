@@ -1,9 +1,15 @@
 import { FaLaptop, FaCode, FaHeart } from "react-icons/fa";
 import MainLayout from "components/layout/MainLayout";
 import HeroBanner from "components/common/hero-banner/HeroBanner";
+import Section from "components/common/section/Section";
+import SectionWidthBackground from "components/common/section-with-background/SectionWidthBackground";
+import ScrollArrow from "components/common/scroll-arrow/ScrollArrow";
 import bannerSrc from "assets/hero-bg.jpg";
 import iphoneSrc from "assets/iphone-bg.png";
-import Section from "./components/common/section/Section";
+import plantsBgSrc from "assets/plants-bg.jpg";
+import portfolio1Src from "assets/portfolio-01.jpg";
+import portfolio2Src from "assets/portfolio-02.jpg";
+import portfolio3Src from "assets/portfolio-03.jpg";
 
 function App() {
   return (
@@ -85,6 +91,60 @@ function App() {
                   lobortis eros.
                 </p>
               </div>
+            </Section>
+          </div>
+        </div>
+      </Section>
+      <SectionWidthBackground imageSrc={plantsBgSrc} isBgFixed={true}>
+        <h2 className="text-uppercase mb-10">I got 99 problems</h2>
+        <h3 className="text-uppercase">But design 'aint one</h3>
+        <ScrollArrow className="center" />
+      </SectionWidthBackground>
+      <Section>
+        <div className="col-3">
+          <div>
+            <img
+              src={portfolio1Src}
+              alt="Porfolio 1"
+              className="img-fluid mb-25"
+              loading="lazy"
+            />
+            <Section title="Creative Minds" isPadded={false}>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                ultricies nulla non metus pulvinar imperdiet. Praesent non
+                adipiscing libero.
+              </p>
+            </Section>
+          </div>
+          <div>
+            <img
+              src={portfolio2Src}
+              alt="Porfolio 2"
+              className="img-fluid mb-25"
+              loading="lazy"
+            />
+            <Section title="Creative Hearts" isPadded={false}>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                ultricies nulla non metus pulvinar imperdiet. Praesent non
+                adipiscing libero.
+              </p>
+            </Section>
+          </div>
+          <div>
+            <img
+              src={portfolio3Src}
+              alt="Porfolio 3"
+              className="img-fluid mb-25"
+              loading="lazy"
+            />
+            <Section title="Creative Ideas" isPadded={false}>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                ultricies nulla non metus pulvinar imperdiet. Praesent non
+                adipiscing libero.
+              </p>
             </Section>
           </div>
         </div>
